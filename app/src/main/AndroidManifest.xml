@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.johannes.wizard">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".Options"
+            android:label="Einstellungen"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".GameActivity"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:theme="@style/AppTheme.CustomTheme"
+            android:name=".Block"
+            android:label="Der Block der Wahrheit"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+
+            android:name=".LoginActivity"
+            android:label="Verbindung mit Server aufbauen"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+
+            android:name=".WaitActivity"
+            android:label="Warten auf Mitspieler"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:theme="@style/AppTheme.KartenAnzeigen"
+            android:name=".testpopup"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:theme="@style/AppTheme.CustomTheme"
+            android:name=".winscreen"
+            android:label="Spiel zu Ende"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".RulesActivity"
+            android:parentActivityName=".MainActivity"
+            android:label="Die Spielregeln"
+            android:screenOrientation="portrait">
+        </activity>
+    </application>
+
+</manifest>
