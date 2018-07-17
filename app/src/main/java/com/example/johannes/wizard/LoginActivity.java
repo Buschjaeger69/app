@@ -18,9 +18,7 @@ import java.net.Inet4Address;
 import java.net.InetAddress;
 import java.net.Socket;
 
-/**
- * Created by Johannes on 22.11.2017.
- */
+
 
 public class LoginActivity extends AppCompatActivity {
     static boolean abbrechen=false;
@@ -51,7 +49,7 @@ public class LoginActivity extends AppCompatActivity {
         try {
             client.close();
         }catch(Exception e){
-
+            Log.e("---Exception---",e.getMessage());
         }
     }
 
@@ -70,7 +68,7 @@ public class LoginActivity extends AppCompatActivity {
                     PrintWriter output = new PrintWriter(client.getOutputStream(), true);
 
                     Log.e("**********************+","Socket: "+client.toString());
-                    Log.e("**********************+","Verbindung zu SpielServer steht");
+
 
 
 
@@ -84,11 +82,11 @@ public class LoginActivity extends AppCompatActivity {
                             Log.e("**********************+","Login Activity beendet: "+client.isBound());
                             finish();
                         } catch (Exception e) {
-
+                            Log.e("---Exception---",e.getMessage());
                         }
 
                 } catch (Exception e) {
-
+                    Log.e("---Exception---",e.getMessage());
                 }
 
             }
