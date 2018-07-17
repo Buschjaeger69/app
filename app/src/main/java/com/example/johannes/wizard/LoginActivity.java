@@ -68,7 +68,7 @@ public class LoginActivity extends AppCompatActivity {
                     PrintWriter output = new PrintWriter(client.getOutputStream(), true);
 
                     Log.e("**********************+","Socket: "+client.toString());
-
+                    Log.e("***************+","Socket: "+client.toString());
 
 
 
